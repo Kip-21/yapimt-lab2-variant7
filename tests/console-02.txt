@@ -1,0 +1,2 @@
+Enter a string (max 255 characters): a
+Palindrome: aa

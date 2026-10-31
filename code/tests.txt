@@ -1,0 +1,139 @@
+Проверка собранного lab2.exe в консоли Windows.
+Все 15 тестов пройдены.
+Для успешных тестов проверены точное значение, длина 2*n и симметрия.
+Кавычки показывают границы строк; консольный протокол может не показывать конечные пробелы.
+
+ТЕСТ 1
+INPUT: ""
+EXPECTED: ""
+ACTUAL: ""
+EXIT: 0
+Enter a string (max 255 characters):
+Palindrome:
+CHECK: PASS
+
+ТЕСТ 2
+INPUT: "a"
+EXPECTED: "aa"
+ACTUAL: "aa"
+EXIT: 0
+Enter a string (max 255 characters): a
+Palindrome: aa
+CHECK: PASS
+
+ТЕСТ 3
+INPUT: "ab"
+EXPECTED: "abba"
+ACTUAL: "abba"
+EXIT: 0
+Enter a string (max 255 characters): ab
+Palindrome: abba
+CHECK: PASS
+
+ТЕСТ 4
+INPUT: "abc"
+EXPECTED: "abccba"
+ACTUAL: "abccba"
+EXIT: 0
+Enter a string (max 255 characters): abc
+Palindrome: abccba
+CHECK: PASS
+
+ТЕСТ 5
+INPUT: "abcd"
+EXPECTED: "abcddcba"
+ACTUAL: "abcddcba"
+EXIT: 0
+Enter a string (max 255 characters): abcd
+Palindrome: abcddcba
+CHECK: PASS
+
+ТЕСТ 6
+INPUT: "aba"
+EXPECTED: "abaaba"
+ACTUAL: "abaaba"
+EXIT: 0
+Enter a string (max 255 characters): aba
+Palindrome: abaaba
+CHECK: PASS
+
+ТЕСТ 7
+INPUT: "aaaa"
+EXPECTED: "aaaaaaaa"
+ACTUAL: "aaaaaaaa"
+EXIT: 0
+Enter a string (max 255 characters): aaaa
+Palindrome: aaaaaaaa
+CHECK: PASS
+
+ТЕСТ 8
+INPUT: "a b"
+EXPECTED: "a bb a"
+ACTUAL: "a bb a"
+EXIT: 0
+Enter a string (max 255 characters): a b
+Palindrome: a bb a
+CHECK: PASS
+
+ТЕСТ 9
+INPUT: " a "
+EXPECTED: " a  a "
+ACTUAL: " a  a "
+EXIT: 0
+Enter a string (max 255 characters):  a
+Palindrome:  a  a
+CHECK: PASS
+
+ТЕСТ 10
+INPUT: "Ab1!"
+EXPECTED: "Ab1!!1bA"
+ACTUAL: "Ab1!!1bA"
+EXIT: 0
+Enter a string (max 255 characters): Ab1!
+Palindrome: Ab1!!1bA
+CHECK: PASS
+
+ТЕСТ 11
+INPUT: "тест"
+EXPECTED: "тесттсет"
+ACTUAL: "тесттсет"
+EXIT: 0
+Enter a string (max 255 characters): тест
+Palindrome: тесттсет
+CHECK: PASS
+
+ТЕСТ 12
+INPUT: "а роза"
+EXPECTED: "а розаазор а"
+ACTUAL: "а розаазор а"
+EXIT: 0
+Enter a string (max 255 characters): а роза
+Palindrome: а розаазор а
+CHECK: PASS
+
+ТЕСТ 13
+INPUT: "abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc"
+EXPECTED: "abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabccbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacba"
+ACTUAL: "abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabccbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacba"
+EXIT: 0
+Enter a string (max 255 characters): abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc
+Palindrome: abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabccbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacba
+CHECK: PASS
+
+ТЕСТ 14
+INPUT: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+EXPECTED: "Error"
+ACTUAL: Error: input failed or string is longer than 255 characters.
+EXIT: 1
+Enter a string (max 255 characters): aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+Error: input failed or string is longer than 255 characters.
+CHECK: PASS
+
+ТЕСТ 15
+INPUT: "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+EXPECTED: "Error"
+ACTUAL: Error: input failed or string is longer than 255 characters.
+EXIT: 1
+Enter a string (max 255 characters): bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
+Error: input failed or string is longer than 255 characters.
+CHECK: PASS

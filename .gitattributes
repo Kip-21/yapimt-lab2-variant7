@@ -1,0 +1,9 @@
+* text=auto
+*.asm text eol=crlf
+*.bat text eol=crlf
+*.tex text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
+*.json text eol=lf
+*.pdf binary
+*.exe binary
