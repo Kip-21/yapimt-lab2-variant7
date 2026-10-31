@@ -150,5 +150,25 @@
     "exit_code": 1,
     "console": "Enter a string (max 255 characters): bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\nbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\nbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\nbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\nError: input failed or string is longer than 255 characters.",
     "passed": true
+  },
+  {
+    "test": 16,
+    "input": " ",
+    "input_length": 1,
+    "expected": "  ",
+    "actual": "  ",
+    "exit_code": 0,
+    "console": "Enter a string (max 255 characters):\nPalindrome:",
+    "passed": true
+  },
+  {
+    "test": 17,
+    "input": "   ",
+    "input_length": 3,
+    "expected": "      ",
+    "actual": "      ",
+    "exit_code": 0,
+    "console": "Enter a string (max 255 characters):\nPalindrome:",
+    "passed": true
   }
 ]

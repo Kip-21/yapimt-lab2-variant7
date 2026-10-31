@@ -1,5 +1,5 @@
 Результаты проверки lab2.exe.
-Пройдено: 15 из 15.
+Пройдено: 17 из 17.
 Кавычки показывают границы строк и сохраняемые пробелы.
 
 ТЕСТ 1
@@ -147,4 +147,22 @@ bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb
 Error: input failed or string is longer than 255 characters.
+CHECK: PASS
+
+ТЕСТ 16
+INPUT: " "
+EXPECTED: "  "
+ACTUAL: "  "
+EXIT: 0
+Enter a string (max 255 characters):
+Palindrome:
+CHECK: PASS
+
+ТЕСТ 17
+INPUT: "   "
+EXPECTED: "      "
+ACTUAL: "      "
+EXIT: 0
+Enter a string (max 255 characters):
+Palindrome:
 CHECK: PASS

@@ -163,7 +163,8 @@ def main():
     executable = root / 'code/lab2.exe'
     check(executable.is_file(), 'Сначала выполните code/build.bat')
     sources = ['', 'a', 'ab', 'abc', 'abcd', 'aba', 'aaaa', 'a b', ' a ',
-               'Ab1!', 'тест', 'а роза', 'abc' * 85, 'a' * 256, 'b' * 300]
+               'Ab1!', 'тест', 'а роза', 'abc' * 85, 'a' * 256, 'b' * 300,
+               ' ', '   ']
     error_text = 'Error: input failed or string is longer than 255 characters.'
     screenshots = {11: '11-russian.png', 14: '14-too-long.png'}
     results = []
