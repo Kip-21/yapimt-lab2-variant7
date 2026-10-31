@@ -92,11 +92,11 @@ $S^R$. Результат $P=S\,S^R$ одинаково читается в об
 5 & \texttt{abcd} & \texttt{abcddcba} & 0 \\
 6 & \texttt{aba} & \texttt{abaaba} & 0 \\
 7 & \texttt{aaaa} & \texttt{aaaaaaaa} & 0 \\
-8 & $\texttt{a}\sqcup\texttt{b}$ & $\texttt{a}\sqcup\texttt{bb}\sqcup\texttt{a}$ & 0 \\
-9 & $\sqcup a\sqcup$ & $\sqcup a\sqcup\sqcup a\sqcup$ & 0 \\
+8 & $\texttt{a}\mathord{\sqcup}\texttt{b}$ & $\texttt{a}\mathord{\sqcup}\texttt{bb}\mathord{\sqcup}\texttt{a}$ & 0 \\
+9 & $\mathord{\sqcup}\texttt{a}\mathord{\sqcup}$ & $\mathord{\sqcup}\texttt{a}\mathord{\sqcup}\mathord{\sqcup}\texttt{a}\mathord{\sqcup}$ & 0 \\
 10 & \texttt{Ab1!} & \texttt{Ab1!!1bA} & 0 \\
 11 & \texttt{тест} & \texttt{тесттсет} & 0 \\
-12 & $\texttt{а}\sqcup\texttt{роза}$ & $\texttt{а}\sqcup\texttt{розаазор}\sqcup\texttt{а}$ & 0 \\
+12 & $\texttt{а}\mathord{\sqcup}\texttt{роза}$ & $\texttt{а}\mathord{\sqcup}\texttt{розаазор}\mathord{\sqcup}\texttt{а}$ & 0 \\
 13 & $(\texttt{abc})^{85}$, 255 символов
    & $(\texttt{abc})^{85}(\texttt{cba})^{85}$, 510 символов & 0 \\
 14 & $\texttt{a}^{256}$ & Ошибка: превышена длина ввода & 1 \\
