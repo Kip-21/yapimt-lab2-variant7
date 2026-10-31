@@ -7,6 +7,7 @@
 # TeX temporary files (keep report.pdf)
 *.aux
 *.log
+!tests/build.log
 *.out
 *.toc
 *.synctex.gz

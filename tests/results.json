@@ -1,5 +1,6 @@
 [
   {
+    "test": 1,
     "input": "",
     "input_length": 0,
     "expected": "",
@@ -9,6 +10,7 @@
     "passed": true
   },
   {
+    "test": 2,
     "input": "a",
     "input_length": 1,
     "expected": "aa",
@@ -18,6 +20,7 @@
     "passed": true
   },
   {
+    "test": 3,
     "input": "ab",
     "input_length": 2,
     "expected": "abba",
@@ -27,6 +30,7 @@
     "passed": true
   },
   {
+    "test": 4,
     "input": "abc",
     "input_length": 3,
     "expected": "abccba",
@@ -36,6 +40,7 @@
     "passed": true
   },
   {
+    "test": 5,
     "input": "abcd",
     "input_length": 4,
     "expected": "abcddcba",
@@ -45,6 +50,7 @@
     "passed": true
   },
   {
+    "test": 6,
     "input": "aba",
     "input_length": 3,
     "expected": "abaaba",
@@ -54,6 +60,7 @@
     "passed": true
   },
   {
+    "test": 7,
     "input": "aaaa",
     "input_length": 4,
     "expected": "aaaaaaaa",
@@ -63,6 +70,7 @@
     "passed": true
   },
   {
+    "test": 8,
     "input": "a b",
     "input_length": 3,
     "expected": "a bb a",
@@ -72,6 +80,7 @@
     "passed": true
   },
   {
+    "test": 9,
     "input": " a ",
     "input_length": 3,
     "expected": " a  a ",
@@ -81,6 +90,7 @@
     "passed": true
   },
   {
+    "test": 10,
     "input": "Ab1!",
     "input_length": 4,
     "expected": "Ab1!!1bA",
@@ -90,15 +100,18 @@
     "passed": true
   },
   {
+    "test": 11,
     "input": "тест",
     "input_length": 4,
     "expected": "тесттсет",
     "actual": "тесттсет",
     "exit_code": 0,
     "console": "Enter a string (max 255 characters): тест\nPalindrome: тесттсет",
-    "passed": true
+    "passed": true,
+    "screenshot": "tests/screenshots/11-russian.png"
   },
   {
+    "test": 12,
     "input": "а роза",
     "input_length": 6,
     "expected": "а розаазор а",
@@ -108,30 +121,34 @@
     "passed": true
   },
   {
+    "test": 13,
     "input": "abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc",
     "input_length": 255,
     "expected": "abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabccbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacba",
     "actual": "abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabccbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacba",
     "exit_code": 0,
-    "console": "Enter a string (max 255 characters): abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc\nPalindrome: abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabccbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacba",
+    "console": "Enter a string (max 255 characters): abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc\nabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabca\nbcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabc\nPalindrome: abcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabca\nbcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcab\ncabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabcabccbacbacbacbacbacbacbacbacbacbacba\ncbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbac\nbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacbacb\nacbacbacbacbacbacbacba",
     "passed": true
   },
   {
+    "test": 14,
     "input": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
     "input_length": 256,
-    "expected": "Error",
-    "actual": null,
+    "expected": "Error: input failed or string is longer than 255 characters.",
+    "actual": "Error: input failed or string is longer than 255 characters.",
     "exit_code": 1,
-    "console": "Enter a string (max 255 characters): aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nError: input failed or string is longer than 255 characters.",
-    "passed": true
+    "console": "Enter a string (max 255 characters): aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\naaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\nError: input failed or string is longer than 255 characters.",
+    "passed": true,
+    "screenshot": "tests/screenshots/14-too-long.png"
   },
   {
+    "test": 15,
     "input": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
     "input_length": 300,
-    "expected": "Error",
-    "actual": null,
+    "expected": "Error: input failed or string is longer than 255 characters.",
+    "actual": "Error: input failed or string is longer than 255 characters.",
     "exit_code": 1,
-    "console": "Enter a string (max 255 characters): bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\nError: input failed or string is longer than 255 characters.",
+    "console": "Enter a string (max 255 characters): bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\nbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\nbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\nbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\nError: input failed or string is longer than 255 characters.",
     "passed": true
   }
 ]

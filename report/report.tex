@@ -5,7 +5,7 @@
 \setmonofont{Consolas}
 \usepackage[russian]{babel}
 \usepackage[left=25mm,right=15mm,top=20mm,bottom=20mm]{geometry}
-\usepackage{amsmath,array,booktabs,listings,xcolor}
+\usepackage{amsmath,array,booktabs,listings,graphicx}
 \setlength{\parindent}{1.25cm}
 \setlength{\parskip}{3pt}
 \setlength{\emergencystretch}{3em}
@@ -15,9 +15,6 @@
  numbers=none,tabsize=4,showstringspaces=false,
  frame=single,xleftmargin=0pt,
  aboveskip=5pt,belowskip=5pt}
-\lstdefinestyle{console}{basicstyle=\ttfamily\fontsize{9}{11}\selectfont\color{white},
- backgroundcolor=\color{black},frame=single,rulecolor=\color{black},
- framesep=6pt,aboveskip=6pt,belowskip=6pt}
 
 \begin{document}
 \section*{1 Цель работы}
@@ -39,7 +36,8 @@ $S^R$. Результат $P=S\,S^R$ одинаково читается в об
 
 \section*{3 Алгоритм}
 \begin{enumerate}
-\item Получить дескрипторы консоли и прочитать исходную строку функцией
+\item Сбросить DF командой \texttt{CLD} в начале \texttt{MAIN}.
+Получить дескрипторы консоли и прочитать исходную строку функцией
 \texttt{ReadConsoleA}. Проверить длину и удалить из учитываемой длины
 завершающие символы CR и LF. Обозначить длину строки через $n$.
 \item Сбросить флаг направления командой \texttt{CLD}. Поместить адреса
@@ -54,14 +52,11 @@ $S^R$. Результат $P=S\,S^R$ одинаково читается в об
 функцией \texttt{WriteConsoleA} и завершить программу.
 \end{enumerate}
 
-Время работы составляет $O(n)$; буфер результата содержит $2n+2$ байта
-с учётом перевода строки. Перед вызовами функций Windows флаг DF сброшен.
-
 \newpage
-\section*{4 Использованные программные средства}
+\section*{4 Используемые команды и функции}
+Для сборки использованы MASM (\texttt{ml.exe}) и Microsoft Link
+(\texttt{link.exe}) из Visual Studio 2026, инструменты x86.
 \begin{itemize}
-\item \texttt{.386}, \texttt{.MODEL FLAT, STDCALL} --- набор команд
-процессора 80386, плоская модель памяти и соглашение вызовов STDCALL.
 \item \texttt{REP MOVSB} --- копирование $n$ байт из \texttt{[ESI]}
 в \texttt{[EDI]}, счётчик повторений --- \texttt{ECX}.
 \item \texttt{STD}, \texttt{CLD} --- выбор направления движения указателей;
@@ -74,11 +69,11 @@ $S^R$. Результат $P=S\,S^R$ одинаково читается в об
 \end{itemize}
 
 \section*{5 Тестирование}
-Программа собрана ассемблером MASM и компоновщиком Microsoft Link
-для консольного приложения Windows x86.
-Проверено 15 запусков исполняемого файла в консоли Windows.
-В каждом успешном тесте фактический результат совпал с ожидаемым,
-имел длину $2n$ и совпадал со своей обратной записью.
+После сборки программа проверена скриптом \texttt{tests/run\_tests.py}
+на 15 строках из таблицы. Во всех случаях получены ожидаемые результат
+и код завершения. Для допустимого ввода также проверены длина $2n$
+и симметричность результата. Журнал сборки сохранён в \texttt{tests/build.log},
+полные протоколы --- в \texttt{code/tests.txt} и \texttt{tests/results.json}.
 
 В таблице $\varepsilon$ обозначает пустую строку, $\sqcup$ --- пробел,
 а степень --- число повторений строки.
@@ -111,34 +106,43 @@ $S^R$. Результат $P=S\,S^R$ одинаково читается в об
 \end{center}
 
 \newpage
-\noindent\textbf{Протоколы отдельных запусков}\\
-Ниже приведён фактический текст консоли, сохранённый при тестировании.
-Полные результаты всех 15 проверок находятся в \texttt{code/tests.txt}.
+\noindent\textbf{Скриншоты консоли Windows}\\
+Ниже приведены снимки окон консоли при выполнении двух тестов.
 
 \medskip
-\noindent\textbf{Тест № 5}\\
-Назначение: формирование палиндрома из строки чётной длины.\\
-Ожидается: \texttt{abcddcba}.
-\lstinputlisting[style=console]{../tests/console-05.txt}
+\noindent\textbf{Тест № 11}\\
+Назначение: обработка русских букв в CP866.\\
+Ожидается: \texttt{тесттсет}, код завершения 0.
+\begin{center}
+\includegraphics[width=\linewidth]{../tests/screenshots/11-russian.png}
+\end{center}
 
 \medskip
-\noindent\textbf{Тест № 1}\\
-Назначение: проверка пустой исходной строки.\\
-Ожидается: пустой результат без ошибки.
-\lstinputlisting[style=console]{../tests/console-01.txt}
+\noindent\textbf{Тест № 14}\\
+Назначение: отклонение строки из 256 символов \texttt{a}.\\
+Ожидается: сообщение об ошибке, код завершения 1.
+\begin{center}
+\includegraphics[width=\linewidth]{../tests/screenshots/14-too-long.png}
+\end{center}
 
-\medskip
-\noindent\textbf{Тест № 8}\\
-Назначение: проверка сохранения пробелов.\\
-Ожидается: \texttt{a bb a}.
-\lstinputlisting[style=console]{../tests/console-08.txt}
+В комплект работы входят исходник \texttt{code/main.asm}, исполняемый файл,
+журнал сборки, скрипт и результаты проверок. Для повторной проверки
+после сборки из корня репозитория выполняется команда:
+\begin{lstlisting}
+py -3 tests/run_tests.py --screenshots
+\end{lstlisting}
+Контрольные суммы исходника и EXE сохранены в \texttt{tests/run-info.json}.
 
 \section*{6 Код программы}
 \lstinputlisting{../code/main.asm}
 
 \section*{7 Вывод}
-Разработана программа формирования палиндрома с использованием
-\texttt{REP MOVSB}, \texttt{LODSB} и \texttt{STOSB}.
-Правильность работы подтверждена обычными и граничными тестами.
+В ходе работы я использовал цепочечные команды для формирования палиндрома.
+Сначала исходная строка копируется в результирующий буфер командой
+\texttt{REP MOVSB}, затем её символы дописываются в обратном порядке
+с помощью \texttt{LODSB} и \texttt{STOSB}. Направление чтения и записи
+задаётся командами \texttt{STD} и \texttt{CLD}. Отдельно обработаны пустая
+строка и ограничение ввода до 255 символов. При проверке 15 случаев получены
+ожидаемые результаты, включая русский ввод и отклонение слишком длинной строки.
 
 \end{document}

@@ -27,7 +27,7 @@ inputBuffer  DB MAX_LENGTH + 3 DUP (?)
 outputBuffer DB 2 * MAX_LENGTH + 2 DUP (?)
 
 .CODE
-; Print EDX bytes starting at EAX to the console.
+; Вывод EDX байтов из буфера с адресом EAX.
 PrintText PROC
     PUSH 0
     PUSH OFFSET written
@@ -39,7 +39,8 @@ PrintText PROC
 PrintText ENDP
 
 MAIN PROC
-    ; CP866 stores each supported character, including Russian letters, in one byte.
+    CLD
+    ; В CP866 русская буква занимает один байт.
     PUSH 866
     CALL SetConsoleCP@4
     PUSH 866
@@ -65,7 +66,7 @@ MAIN PROC
     TEST EAX, EAX
     JZ inputError
 
-    ; The console adds CR and LF. They are not part of the source string.
+    ; Консоль добавляет CR и LF; они не входят в исходную строку.
     MOV ECX, readCount
     CMP ECX, 2
     JB inputError
@@ -78,13 +79,13 @@ MAIN PROC
     JNE inputError
     MOV stringLength, ECX
 
-    ; Copy the source string to the first half of the result.
+    ; Копирование исходной строки.
     CLD
     MOV ESI, OFFSET inputBuffer
     MOV EDI, OFFSET outputBuffer
     REP MOVSB
 
-    ; Append the source string in reverse order.
+    ; Дописывание символов в обратном порядке.
     MOV ECX, stringLength
     JECXZ palindromeReady
     LEA ESI, inputBuffer[ECX-1]
@@ -96,7 +97,7 @@ copyBackwards:
     LOOP copyBackwards
 
 palindromeReady:
-    ; DF is zero before any Windows API call.
+    ; Добавление перевода строки.
     MOV AL, 13
     STOSB
     MOV AL, 10
