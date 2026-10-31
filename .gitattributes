@@ -1,5 +1,5 @@
 * text=auto
-*.asm text eol=crlf
+*.asm text eol=lf
 *.bat text eol=crlf
 *.tex text eol=lf
 *.md text eol=lf
