@@ -81,28 +81,28 @@ $S^R$. Результат $P=S\,S^R$ одинаково читается в об
 \begin{center}
 \small
 \renewcommand{\arraystretch}{1.22}
-\begin{tabular}{@{}c p{37mm} p{66mm} c@{}}
+\begin{tabular}{@{}c p{37mm} p{66mm}@{}}
 \toprule
-№ & Исходная строка & Результат & Код выхода \\
+№ & Исходная строка & Результат \\
 \midrule
-1 & Пустая строка & Пустая строка & 0 \\
-2 & \texttt{a} & \texttt{aa} & 0 \\
-3 & \texttt{ab} & \texttt{abba} & 0 \\
-4 & \texttt{abc} & \texttt{abccba} & 0 \\
-5 & \texttt{abcd} & \texttt{abcddcba} & 0 \\
-6 & \texttt{aba} & \texttt{abaaba} & 0 \\
-7 & \texttt{aaaa} & \texttt{aaaaaaaa} & 0 \\
-8 & $\texttt{a}\mathord{\sqcup}\texttt{b}$ & $\texttt{a}\mathord{\sqcup}\texttt{bb}\mathord{\sqcup}\texttt{a}$ & 0 \\
-9 & $\mathord{\sqcup}\texttt{a}\mathord{\sqcup}$ & $\mathord{\sqcup}\texttt{a}\mathord{\sqcup}\mathord{\sqcup}\texttt{a}\mathord{\sqcup}$ & 0 \\
-10 & \texttt{Ab1!} & \texttt{Ab1!!1bA} & 0 \\
-11 & \texttt{тест} & \texttt{тесттсет} & 0 \\
-12 & $\texttt{а}\mathord{\sqcup}\texttt{роза}$ & $\texttt{а}\mathord{\sqcup}\texttt{розаазор}\mathord{\sqcup}\texttt{а}$ & 0 \\
+1 & Пустая строка & Пустая строка \\
+2 & \texttt{a} & \texttt{aa} \\
+3 & \texttt{ab} & \texttt{abba} \\
+4 & \texttt{abc} & \texttt{abccba} \\
+5 & \texttt{abcd} & \texttt{abcddcba} \\
+6 & \texttt{aba} & \texttt{abaaba} \\
+7 & \texttt{aaaa} & \texttt{aaaaaaaa} \\
+8 & $\texttt{a}\mathord{\sqcup}\texttt{b}$ & $\texttt{a}\mathord{\sqcup}\texttt{bb}\mathord{\sqcup}\texttt{a}$ \\
+9 & $\mathord{\sqcup}\texttt{a}\mathord{\sqcup}$ & $\mathord{\sqcup}\texttt{a}\mathord{\sqcup}\mathord{\sqcup}\texttt{a}\mathord{\sqcup}$ \\
+10 & \texttt{Ab1!} & \texttt{Ab1!!1bA} \\
+11 & \texttt{тест} & \texttt{тесттсет} \\
+12 & $\texttt{а}\mathord{\sqcup}\texttt{роза}$ & $\texttt{а}\mathord{\sqcup}\texttt{розаазор}\mathord{\sqcup}\texttt{а}$ \\
 13 & $(\texttt{abc})^{85}$, 255 символов
-   & $(\texttt{abc})^{85}(\texttt{cba})^{85}$, 510 символов & 0 \\
-14 & $\texttt{a}^{256}$ & Ошибка: превышена длина ввода & 1 \\
-15 & $\texttt{b}^{300}$ & Ошибка: превышена длина ввода & 1 \\
-16 & 1 пробел & 2 пробела & 0 \\
-17 & 3 пробела & 6 пробелов & 0 \\
+   & $(\texttt{abc})^{85}(\texttt{cba})^{85}$, 510 символов \\
+14 & $\texttt{a}^{256}$ & Ошибка: превышена длина ввода \\
+15 & $\texttt{b}^{300}$ & Ошибка: превышена длина ввода \\
+16 & 1 пробел & 2 пробела \\
+17 & 3 пробела & 6 пробелов \\
 \bottomrule
 \end{tabular}
 \end{center}
