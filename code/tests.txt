@@ -1,7 +1,4 @@
-Проверка lab2.exe в консолях Windows.
-Команда: C:\Users\Kip\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe .\tests\run_tests.py --screenshots
-Исходник SHA256: 591e2ec7bdc8de3a73f91c87e42ff7d0e5e754e3fad200e55313c2d448d103f1
-EXE SHA256: 1d98ee58031a7e3b612b6d015f8f923255ea2f8a02992610cf3cf4ab3d351f2c
+Результаты проверки lab2.exe.
 Пройдено: 15 из 15.
 Кавычки показывают границы строк и сохраняемые пробелы.
 

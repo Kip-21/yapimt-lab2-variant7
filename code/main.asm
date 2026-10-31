@@ -39,7 +39,6 @@ PrintText PROC
 PrintText ENDP
 
 MAIN PROC
-    CLD
     ; В CP866 русская буква занимает один байт.
     PUSH 866
     CALL SetConsoleCP@4

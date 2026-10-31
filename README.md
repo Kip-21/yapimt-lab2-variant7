@@ -45,7 +45,7 @@ xelatex -interaction=nonstopmode -halt-on-error report.tex
 
 Нужен XeLaTeX (MiKTeX или TeX Live), шрифты Times New Roman и Consolas.
 Сохраняйте папки `code`, `report` и `tests` рядом: листинг берётся из
-`code/main.asm`, а настоящие снимки консоли — из `tests/screenshots/`.
+`code/main.asm`, а снимки консоли — из `tests/screenshots/`.
 Все 15 тестов перечислены в отчёте; для двух приведены назначение, ожидание
 и скриншот. Сохранены также текстовые протоколы всех запусков.
 Титульного листа нет; его можно добавить отдельно.

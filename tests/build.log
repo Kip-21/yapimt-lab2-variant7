@@ -7,14 +7,14 @@ ml /nologo /c /coff /Zi main.asm
  Assembling: main.asm
 link /nologo /subsystem:console /machine:x86 /debug /out:lab2.exe main.obj kernel32.lib
 Built lab2.exe
-Started UTC: 2026-10-31T07:51:31.5008338Z
+Started UTC: 2026-10-31T08:06:43.1950732Z
 Command: code\build.bat
 Exit code: 0
 
 Algorithm : SHA256
-Hash      : 591E2EC7BDC8DE3A73F91C87E42FF7D0E5E754E3FAD200E55313C2D448D103F1
+Hash      : 40EBF889CD31F29BE77EE9F1B7712173F3A8241BFC04433ED7DDC6234D0EA757
 Path      : C:\Users\Kip\Documents\Учеба\7 семестр\ЯПИМТ\2\lab2\code\main.asm
 
 Algorithm : SHA256
-Hash      : 1D98EE58031A7E3B612B6D015F8F923255EA2F8A02992610CF3CF4AB3D351F2C
+Hash      : B1BC3EEAE130BD9D90E8DFD1FCCAD4C5D93F13825620E54951EF3AAF4DDD826C
 Path      : C:\Users\Kip\Documents\Учеба\7 семестр\ЯПИМТ\2\lab2\code\lab2.exe

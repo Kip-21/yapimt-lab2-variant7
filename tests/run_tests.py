@@ -249,10 +249,7 @@ def main():
                 'passed': len(results), 'total': len(sources)}
     (target/'results.json').write_text(json.dumps(results, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
     (target/'run-info.json').write_text(json.dumps(metadata, ensure_ascii=False, indent=2)+'\n', encoding='utf-8')
-    lines = ['Проверка lab2.exe в консолях Windows.',
-             'Команда: ' + metadata['command'],
-             'Исходник SHA256: ' + metadata['source_sha256'],
-             'EXE SHA256: ' + metadata['executable_sha256'],
+    lines = ['Результаты проверки lab2.exe.',
              f'Пройдено: {len(results)} из {len(sources)}.',
              'Кавычки показывают границы строк и сохраняемые пробелы.', '']
     for number, result in enumerate(results, 1):
